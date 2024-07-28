@@ -1,6 +1,6 @@
 export const asyncPostCall = async (path, headersBody) => {
   try {
-    const response = await fetch(`http://localhost:8086${path}`, headersBody);
+    const response = await fetch(`https://dobby-ads-server-ak2s.onrender.com${path}`, headersBody);
     const contentType = response.headers.get('content-type');
     if (contentType && contentType.indexOf('application/json') !== -1) {
       const data = await response.json();
